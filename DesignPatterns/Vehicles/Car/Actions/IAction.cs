@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.Vehicles {
-    public enum DriverType {
-        Buyer,
-        Demo,
-        Theft
+namespace DesignPatterns.Vehicles.Car.Actions {
+    public interface IAction {
+        bool Execute();
     }
 }

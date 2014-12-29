@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.Vehicle.Car {
-    static class CarDealer {
+namespace DesignPatterns.Vehicles.Car {
+    
+    public static class CarFactory {
         public static ICar GetCar( DriverType dt ) {
             switch( dt ) {
                 case DriverType.Buyer:

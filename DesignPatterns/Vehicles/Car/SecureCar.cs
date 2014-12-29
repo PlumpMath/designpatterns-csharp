@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.Vehicle.Car {
+namespace DesignPatterns.Vehicles.Car {
     class SecureCar : ICar {
         private ICar _car;
         private bool _hasKey;
@@ -14,12 +14,12 @@ namespace DesignPatterns.Vehicle.Car {
             _hasKey = hasKey;
         }
 
-        public bool StartCar() {
+        public bool Start() {
             if( !_hasKey ) {
                 Console.WriteLine( "Not allowed to start car without the key!" );
                 return false;
             }
-            return _car.StartCar();
+            return _car.Start();
         }
 
         public bool Forward() {

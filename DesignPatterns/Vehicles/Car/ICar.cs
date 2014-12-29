@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.Vehicle.Car {
+namespace DesignPatterns.Vehicles.Car {
     public interface ICar {
-        bool StartCar();
+        bool Start();
  
         bool Forward();
         bool Reverse();

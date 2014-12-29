@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns.Vehicle.Car {
+namespace DesignPatterns.Vehicles.Car {
     class Car : ICar {
         bool _isStarted = false;
 
         public Car() {}
 
-        public bool StartCar() {
+        public bool Start() {
             if( _isStarted ) {
                 Console.WriteLine( "Car has already started." );
                 return false;
