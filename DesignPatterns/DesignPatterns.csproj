@@ -42,6 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Desserts\IceCream\Base\Dish.cs" />
+    <Compile Include="Desserts\IceCream\Base\IceCreamCone.cs" />
+    <Compile Include="Desserts\IceCream\IceCreamMaker.cs" />
+    <Compile Include="Desserts\IceCream\IceCreamType.cs" />
+    <Compile Include="Desserts\IceCream\IIceCream.cs" />
+    <Compile Include="Desserts\IceCream\Ingredients\Banana.cs" />
+    <Compile Include="Desserts\IceCream\Ingredients\ChocolateIceCreamScoop.cs" />
+    <Compile Include="Desserts\IceCream\Ingredients\StrawberryIceCreamScoop.cs" />
+    <Compile Include="Desserts\IceCream\Ingredients\VanillaIceCreamScoop.cs" />
     <Compile Include="Vehicles\Car\Actions\SteerRightAction.cs" />
     <Compile Include="Vehicles\Car\Actions\ReverseAction.cs" />
     <Compile Include="Vehicles\Car\Actions\ForwardAction.cs" />

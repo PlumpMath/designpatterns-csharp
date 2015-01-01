@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DesignPatterns.Desserts.IceCream;
+using DesignPatterns.Desserts.IceCream.Ingredients;
 using DesignPatterns.Vehicles;
 using DesignPatterns.Vehicles.Car;
 
 namespace DesignPatterns {
     class Program {
         public static void Main() {
-            ProxyPattern();
             CommandPattern();
+            DecoratorPattern();
+            ProxyPattern();
 
             Console.WriteLine();
             Console.WriteLine( "Press any key to close." );
@@ -73,6 +76,54 @@ namespace DesignPatterns {
             driver.Left();
             driver.Right();
             driver.WhereAmI();
+            Console.WriteLine();
+        }
+
+        /// <summary>
+        /// Uses IceCreamMaker, which uses the Decorator Pattern to create the ice cream
+        /// </summary>
+        private static void DecoratorPattern() {
+            Console.WriteLine( "===== Command Pattern Example =====" );
+            Console.WriteLine();
+
+            Console.WriteLine( "----- Ice Cream Cones -----" );
+
+            Console.WriteLine( "The chocolate ice cream cone contains:" );
+            IIceCream chocolateIceCream = IceCreamMaker.MakeIceCream( IceCreamType.Chocolate );
+            foreach( string ingredient in chocolateIceCream.Ingredients() ) {
+                Console.WriteLine( "- " + ingredient );
+            }
+            Console.WriteLine();
+
+            Console.WriteLine( "The strawberry ice cream cone contains:" );
+            IIceCream strawberryIceCream = IceCreamMaker.MakeIceCream( IceCreamType.Strawberry );
+            foreach( string ingredient in strawberryIceCream.Ingredients() ) {
+                Console.WriteLine( "- " + ingredient );
+            }
+            Console.WriteLine();
+
+            Console.WriteLine( "The vanilla ice cream cone contains:" );
+            IIceCream vanillaIceCream = IceCreamMaker.MakeIceCream( IceCreamType.Vanilla );
+            foreach( string ingredient in vanillaIceCream.Ingredients() ) {
+                Console.WriteLine( "- " + ingredient );
+            }
+            Console.WriteLine();
+
+            Console.WriteLine( "The triple deluxe ice cream cone contains:" );
+            IIceCream tripleDeluxeIceCream = IceCreamMaker.MakeIceCream( IceCreamType.TripleDeluxe );
+            foreach( string ingredient in tripleDeluxeIceCream.Ingredients() ) {
+                Console.WriteLine( "- " + ingredient );
+            }
+            Console.WriteLine();
+
+            Console.WriteLine( "----- Ice Cream Specials -----" );
+            Console.WriteLine( "The banana split contains:" );
+            IIceCream BananaSplit = IceCreamMaker.MakeIceCream( IceCreamType.BananaSplit );
+            foreach( string ingredient in BananaSplit.Ingredients() ) {
+                Console.WriteLine( "- " + ingredient );
+            }
+            Console.WriteLine();
+
             Console.WriteLine();
         }
     }
